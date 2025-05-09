@@ -43,11 +43,9 @@
             testimonials[slideIndex].classList.add("active");
 
             function showSlide(index) {
-                // Remove 'active' class from all testimonials
                 for (let i = 0; i < testimonials.length; i++) {
                     testimonials[i].classList.remove("active");
                 }
-                // Add 'active' class to the current testimonial
                 testimonials[index].classList.add("active");
             }
 

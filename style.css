@@ -36,7 +36,6 @@ body {
 
 .btn-grad:hover {
     background-position: right center;
-    /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
 }
@@ -185,7 +184,6 @@ body {
 
 .btn-grad:hover {
     background-position: right center;
-    /* change the direction of the change here */
     color: #fff;
 
     text-decoration: none;
@@ -229,7 +227,6 @@ body {
 
 .btn-grad:hover {
     background-position: right center;
-    /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -344,7 +341,6 @@ body {
     border-radius: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 
@@ -353,7 +349,6 @@ body {
 
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: #888;
     background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
@@ -362,7 +357,6 @@ body {
 
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
     background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
@@ -371,7 +365,6 @@ body {
 
 }
 
-/* CSS */
 .footer {
     background-color: var(--color3);
     color: var(--color1);
