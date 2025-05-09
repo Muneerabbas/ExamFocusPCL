@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamFocus</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="./atharva.png">
+
+    <script>
+
+        /*const testimonal = document.getElementsByClassName("testimonals-cards")
+         const nxt = document.getElementById("next");
+         const next = document.getElementsByClassName("next");
+         let slideIndex = 0;
+        
+ 
+         nxt.addEventListener("click", () => {
+ 
+             testimonal[slideIndex].classList.remove("active");
+ 
+ 
+         })*/
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const testimonials = document.getElementsByClassName("testimonals-cards");
+            const nextBtn = document.getElementById("next");
+            const prevBtn = document.getElementById("prev");
+            let slideIndex = 0;
+
+            testimonials[slideIndex].classList.add("active");
+
+            function showSlide(index) {
+                // Remove 'active' class from all testimonials
+                for (let i = 0; i < testimonials.length; i++) {
+                    testimonials[i].classList.remove("active");
+                }
+                // Add 'active' class to the current testimonial
+                testimonials[index].classList.add("active");
+            }
+
+            nextBtn.addEventListener("click", () => {
+                slideIndex = (slideIndex + 1) % testimonials.length;
+                showSlide(slideIndex);
+            });
+
+            prevBtn.addEventListener("click", () => {
+                slideIndex = (slideIndex - 1 + testimonials.length) % testimonials.length;
+                showSlide(slideIndex);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <div id="main">
+        <header>
+            <nav>
+                <ul class='nav-bar'>
+                    <li class='logo'><a href='#' class="logo">
+                            <p>ExamFocus</p>
+                        </a></li>
+                    <input type='checkbox' id='check' />
+                    <span class="menu">
+                        <li><a href="">Home</a></li>
+                        <li><a href="#results">Results</a></li>
+                        <li><a target="_blank" href="https://forms.gle/N2LZUaaYJZb4AXVAA">Register</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="#about-us">About</a></li>
+                        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+                </ul>
+            </nav>
+        </header>
+        <div id="heading">
+
+            <h1>Education That <br>EVERYONE Deserves</h1>
+            <h3>Join us Today, Grind Later!, Result in End</h3>
+            <button class="btn-grad"><a target="_blank" href="https://forms.gle/N2LZUaaYJZb4AXVAA">Register
+                    Now!</a></button>
+
+        </div>
+
+    </div>
+
+    <div id="results">
+        <h1>Our Results</h1>
+        <div class="results-student">
+            <div class="student-cards">
+                <img src="./images/atharva.png" alt="Face">
+                <h3 class="name">Athrva Chudapa</h3>
+                <h3>AIR 247 JEE</h3>
+                <p>IIT Delhi</p>
+            </div>
+            <div class="student-cards">
+                <img src="./images/harshad.jpg" alt="Face">
+                <h3 class="name">Harshad Lugde</h3>
+                <h3>AIR 1290</h3>
+                <p>IIT Dhanbad</p>
+            </div>
+            <div class="student-cards">
+                <img src="./images/mee.jpg" alt="Face">
+                <h3 class="name">Muneer Abass</h3>
+                <h3>99.93 Percentile</h3>
+                <p>NIT Warangal</p>
+            </div>
+
+            <div class="student-cards">
+                <img src="./images/sanskar.jpg" alt="Face">
+                <h3 class="name">Sanskar Aitawade</h3>
+                <h3>99.72 Percentile</h3>
+                <p>NIT Suratkal</p>
+            </div>
+            <div class="student-cards">
+                <img src="./images/tejas.jpg" alt="Face">
+                <h3 class="name">Tejas Kharade</h3>
+                <h3>99.11 Percentile</h3>
+                <p>COEP</p>
+            </div>
+            <div class="student-cards">
+                <img src="./images/manthan.jpg" alt="Face">
+                <h3 class="name">Manthan Shah</h3>
+                <h3>99.13 Percentile</h3>
+                <p>PICT</p>
+            </div>
+
+
+
+            <div class="student-cards">
+                <img src="./images/shintre.jpg" alt="Face">
+                <h3 class="name">Raj Shintre</h3>
+                <h3>99.43 Percentile</h3>
+                <p>NIT TRICHY</p>
+            </div>
+            <div class="student-cards">
+                <img src="./images/wankhade.jpg" alt="Face">
+                <h3 class="name">Sanskar Wankhade</h3>
+                <h3>98.98 Percentile</h3>
+                <p>PICT</p>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <div id="testimonals">
+
+        <h1>What Students Say About US</h1>
+        <div class="testimonal-content">
+
+            <div class="testimonals-cards">
+                <img class="testimonalface" src="./images/testimonalface1.jpg" alt="Face">
+                <h3 class="testimonal-name">Karan Kulkarni</h3>
+                <div class="star-div"> <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+
+                <p>From being an average scorer to securing top marks, this coaching center changed the game for me. The
+                    study material was well-designed and the mock tests closely resembled actual exam patterns.</p>
+            </div>
+            <div class="testimonals-cards">
+                <img src="./images/testimonalface3.jpg" alt="Face" class="testimonalface">
+                <h3 class="testimonal-name">Aditaya Mehta</h3>
+                <div class="star-div"> <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+
+                <p>Excellent coaching! The faculty here doesn't just teach—they mentor. They helped me understand where
+                    I was going wrong and how to fix it. The environment is also very motivating and supportive.</p>
+            </div>
+            <div class="testimonals-cards">
+                <img src="./images/testimonalface4.jpg" alt="Face" class="testimonalface">
+                <h3 class="testimonal-name">Manas Royson</h3>
+                <div class="star-div"> <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+
+                <p>I enrolled to enhance my communication skills. The interactive sessions and practical exercises
+                    provided me with the tools to express myself more effectively. Best Coaching Center I ever found.
+                </p>
+            </div>
+            <div class="testimonals-cards">
+                <img src="./images/testimonalface2.jpg" alt="Face" class="testimonalface">
+                <h3 class="testimonal-name">Gohan Shah</h3>
+                <div class="star-div">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+
+                <p>Joining this coaching center was one of the best decisions I've made. The teachers are not only
+                    highly knowledgeable but also genuinely invested in every student's growth. All Thanks To them and
+                    their Teachers </p>
+            </div>
+
+
+
+
+        </div>
+        <button id="prev"> <i class="fas fa-arrow-left"></i>
+        </button>
+
+        <button id="next"> <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <div id="about-us">
+        <h1>About US</h1>
+        <p>At ExamFocus, we are dedicated to helping students unlock their full potential and achieve academic
+            excellence. Founded with the vision of delivering focused, result-oriented education, we specialize in
+            preparing students for competitive exams, board exams, and overall academic success.
+            <br><br>
+            Our team of experienced and passionate educators combines deep subject knowledge with innovative teaching
+            methods to make learning effective, engaging, and goal-driven. Whether you're aiming for top ranks or
+            striving to build a strong foundation, ExamFocus provides the right guidance, personalized support, and
+            structured study plans to help you stay on track.
+            <br><br>
+            We believe that every student can succeed with the right mentorship, discipline, and environment—and that’s
+            exactly what we strive to provide every day.
+            <br><br><br>
+            Focus. Prepare. Excel. – That’s the ExamFocus way.
+        </p>
+
+
+    </div>
+    <!-- HTML -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h2>ExamFocus</h2>
+                <p>Empowering students with focused learning and expert guidance.</p>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>📍 Location:PICT Trimurti Chowk </p>
+                <p>📞 Phone: +91-982675219</p>
+                <p>📧 Email: contactus@examfocus.com</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#main">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="tel: 982675219">Call Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.facebook.com/PICTOfficial/" aria-label="Facebook"><i
+                            class="fab fa-facebook"></i></a>
+
+
+                    <a target="_blank" href="https://www.instagram.com/pict.pune/?hl=en" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://x.com/punepict?lang=en" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCCJyNr-3CmrostB2mFZYmgw"
+                        aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 ExamFocus. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

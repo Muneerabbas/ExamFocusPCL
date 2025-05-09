@@ -1,0 +1,494 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+
+    --color1: #FFF;
+    --color2: #181818;
+    --color3: #CB0404;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
+    padding: 12px 20px;
+    height: 10vh;
+    border-end-start-radius: 1.4rem;
+    border-bottom-right-radius: 1.4rem;
+}
+
+
+
+
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.logo {
+    text-decoration: none;
+    color: var(--color1);
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    padding-left: 30px;
+}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+    width: 100%;
+
+}
+
+.open-menu,
+.close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./images/main.jpg);
+}
+
+#heading {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+    margin-top: 5rem;
+}
+
+#heading h1 {
+    font-weight: 1000;
+    color: var(--color1);
+    text-align: left;
+    line-height: 4rem;
+    /* margin-top: 12rem; */
+    margin-left: 1.5rem;
+    font-size: 4em;
+}
+
+#heading h3 {
+    font-weight: 400;
+    color: var(--color1);
+    text-align: left;
+    text-align: center;
+    /* margin-top: 12rem; */
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+
+}
+
+.registerbtn {
+    width: auto;
+    height: auto;
+    padding: 1rem;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    background-color: yellow;
+    border-radius: 10rem;
+    border: 3px solid;
+    color: var(--color2);
+    border-color: var(--color2);
+    margin-right: 37rem;
+    margin-left: 37rem;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #FF8008 0%, #FFC837 51%, #FF8008 100%)
+}
+
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    background-size: 200% auto;
+    color: white;
+    /* box-shadow: 0 0 20px #eee; */
+    border-radius: 10px;
+    display: block;
+    align-self: center;
+    margin-top: 7rem;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+
+    text-decoration: none;
+}
+
+#results,
+#about-us {
+    text-align: center;
+    padding: 1rem;
+    color: var(--color1);
+    background-color: var(--color2);
+}
+
+#results h1,
+#about-us h1 {
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+#about-us p {
+    margin: 2rem;
+
+}
+
+
+
+.results-student {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.icon {
+    color: black;
+}
+
+.btn-grad a {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.student-cards {
+    background-color: var(--color1);
+    width: 18%;
+    color: var(--color2);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1.8rem;
+}
+
+.student-cards img {
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+}
+
+.student-cards:hover {
+    /* background-color: var(--color3); */
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
+
+    color: var(--color1);
+    transition: ease-in-out .3s;
+    transform: scale(1.02);
+
+}
+
+.name {
+    margin-bottom: 1.7rem;
+    margin-top: .6rem;
+
+}
+
+#testimonals {
+    text-align: center;
+    padding: 1rem;
+    color: var(--color2);
+    background-color: var(--color1);
+}
+
+#testimonals h1 {
+    font-size: 2rem;
+    margin: 2rem;
+    margin-bottom: 3rem;
+}
+
+.testimonals-cards {
+    background-color: var(--color3);
+    width: 90%;
+
+    color: var(--color1);
+    padding: 1rem;
+
+    border-radius: 1rem;
+    margin: 4rem;
+    display: none;
+    box-shadow: 5px 10px var(--color2);
+}
+
+.active {
+    display: block;
+}
+
+.testimonal-name {
+    margin-top: -3rem;
+    margin-bottom: 5rem;
+}
+
+.testimonalface {
+    border-radius: 50%;
+    width: 7rem;
+    position: relative;
+    top: -4rem;
+    border: 2px solid var(--color1);
+    height: 7rem;
+}
+
+.testimonal-content {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.star-div {
+    margin-bottom: 1rem;
+}
+
+
+
+#next,
+#prev {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: none;
+    margin: 1rem;
+    border: 2px solid var(--color3);
+    padding: auto;
+    color: var(--color1);
+    background-color: var(--color2);
+}
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    /* bacground-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%); */
+    border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+
+    border-radius: 10px;
+
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
+    border-radius: 10px;
+
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
+    border-radius: 10px;
+
+
+}
+
+/* CSS */
+.footer {
+    background-color: var(--color3);
+    color: var(--color1);
+    padding: 40px 20px 20px;
+
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer h2,
+.footer h3 {
+    margin-bottom: 10px;
+    color: gold;
+}
+
+.footer p,
+.footer a {
+    font-size: 14px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.social-icons a {
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+@media(max-width: 610px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .menu li {
+        margin-top: 40px;
+    }
+
+    .menu li a {
+        padding: 10px;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+
+    #check:checked~.menu {
+        right: 0;
+    }
+
+    .results-student {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .student-cards {
+        width: 70%;
+    }
+
+    #heading h1 {
+        font-size: 3rem;
+
+    }
+
+    #heading h3 {
+        font-size: 1rem;
+
+    }
+
+    .btn-grad {
+
+        width: 10rem;
+    }
+
+    .testimonals-cards p {
+        font-size: .8rem;
+    }
+
+}
